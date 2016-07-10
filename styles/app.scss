@@ -3,4 +3,179 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+
 @import 'box-sizing';
+
+$grayest: #343436;
+$bluegray: #1a1c1d;
+$lowlight: #1d1f20;
+$lightgray: #cccccc;
+$accent: #c67228;
+$purple: #766474;
+$green: #dcc97d;
+$border: #252728;
+
+body {
+background: $border;
+font-family: 'Hind Siliguri', sans-serif;
+}
+
+.page {
+  width: 100%;
+}
+
+.header-container {
+  background: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+  border: 0.05rem solid $border;
+}
+
+.page-width-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.header-content {
+  vertical-align: middle;
+  padding: 0.2rem 0;
+  line-height: 0.5rem;
+
+  h1 {
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 0.07rem;
+    font-weight: bold;
+  }
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.middle-content {
+  display: flex;
+  color: $lightgray;
+  background: $bluegray;
+  border-radius: 0.3rem;
+  border: 0.05rem solid $border;
+
+}
+
+.left-container {
+  width: 30%;
+  padding: 1rem;
+  // margin: 0 0.5rem;
+
+
+&__topcontent {
+  background: $lowlight;
+  padding: 0.5rem;
+  border: 0.02rem solid $border;
+  border-radius: 0.3rem;
+}
+
+&__img {
+  width: 100%;
+  border-radius: 0.5rem;
+  }
+
+&__title {
+  letter-spacing: 0.04rem;
+}
+&__year {
+  margin-bottom: 3rem;
+  color: $green;
+  letter-spacing: 0.08rem;
+}
+  h2 {
+  font-size: 1.3rem;
+  }
+  h3{
+    font-family: 'Noto Serif', serif;
+    font-size: 1.4rem;
+    // line-height: 0;
+    border-bottom: 0.15rem solid $purple;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  &__creators {
+    width: 100%;
+    padding: 0.4rem 0;
+
+  }
+}
+
+.linebreak {
+  width: 100%;
+  // border: 0.05rem solid lighten($grayest, 10%);
+  border: 0.05rem solid $purple;
+}
+
+.right-container {
+  width: 70%;
+  // margin: 0 0.5rem;
+  padding: 1.5rem;
+  // background: $bluegray;
+  // border-radius: 0.3rem;
+  // border: 0.05rem solid $border;
+
+
+  h2{
+    font-family: 'Noto Serif', serif;
+    font-size: 1.4rem;
+    // line-height: auto;
+    margin: 0 0 1rem 0;
+    padding: 0.03rem 0.5rem;
+    border-bottom: 0.15rem solid $purple;
+  }
+  &__new-element {
+    width: calc(100% - 1rem);
+
+  }
+
+
+  &__container-characters{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  &__container-comics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  &__element{
+    width: calc(100% / 4);
+    margin: 0.25rem 0.3rem;
+    padding: 0.4rem 0.5rem;
+    background: $lowlight;
+    border: 0.02rem solid $border;
+    border-radius: 0.3rem;
+    // line-height: 0.5rem;
+    &__name {
+      line-height: 2rem;
+    }
+    &__image {
+      width: 100%;
+      &__img {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 0.5rem;
+      }
+    }
+    &__button{
+      margin: 1rem auto;
+      padding: 0.2rem 0;
+      width: 100%;
+      background: $accent;
+      color: #fff;
+      border: 0.1rem solid $accent;
+      border-radius: 0.3rem;
+    }
+  }
+
+}
