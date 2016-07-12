@@ -25,17 +25,22 @@ export default class ComicListView {
         const comicPicChild = document.createElement('img');
         comicPicChild.classList.add('right-container__element__image__img');
 
+        const comicReadMore = document.createElement('button');
+        comicReadMore.classList.add('right-container__element__button');
+
 
 
         comicName.innerText = comic.title;
         comicNumber.innerText = (`# ${comic.issueNumber}`);
         comicPicChild.src = (`${comic.thumbnail.path}.${comic.thumbnail.extension}`);
+        comicReadMore.innerText = 'Read More';
 
         comicElement.appendChild(comicPicParent);
         comicPicParent.appendChild(comicPicChild);
         comicParent.appendChild(comicElement);
         comicElement.appendChild(comicNumber);
         comicElement.appendChild(comicName);
+        comicElement.appendChild(comicReadMore);
       }
     );
 

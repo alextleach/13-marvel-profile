@@ -9,13 +9,15 @@ body {
 
 * {
   box-sizing: inherit;
-  // border: 0.03rem solid black;
 
   ul{
     list-style: none;
     padding-left: 0;
   }
 
+  p{
+    line-height: 0;
+  }
   &:before,
   &:after {
     box-sizing: inherit;

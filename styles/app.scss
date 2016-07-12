@@ -18,7 +18,7 @@ $peach: #ffb49d;
 $gutter: 0.5rem;
 
 body {
-background: $border;
+background: #e7e7e7;
 font-family: 'Lato', sans-serif;
 }
 
@@ -29,8 +29,6 @@ font-family: 'Lato', sans-serif;
 .header-container {
   background: #000;
   color: #fff;
-  margin-bottom: $gutter;
-  // border: 0.05rem solid $border;
 }
 
 .page-width-container {
@@ -47,7 +45,7 @@ font-family: 'Lato', sans-serif;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 0.07rem;
     font-weight: bold;
-    margin-left: $gutter * 2;
+    margin-left: $gutter * 2.5;
   }
 }
 
@@ -58,10 +56,11 @@ font-family: 'Lato', sans-serif;
 
 .middle-content {
   display: flex;
+  background: $border;
   color: $lightgray;
-  // background: $bluegray;
-  // border-radius: 0.3rem;
-  // border: 0.05rem solid $border;
+  padding-top: 0.6rem;
+  padding-bottom: 2rem;
+  min-height: 100vh;
 
 }
 
@@ -151,7 +150,8 @@ font-family: 'Lato', sans-serif;
     border-radius: 0.4rem;
   }
   &__new-element {
-    width: calc(100% - 1rem);
+    // width: calc(100% - 1rem);
+    width: 100%;
 
   }
 
@@ -161,24 +161,25 @@ font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: row;
     padding-bottom: 1rem;
-    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
   }
   &__container-comics {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   &__element{
-    width: calc(100% / 4 - 1rem);
+    width: calc(100% / 4 - 0.6rem);
     margin: 0.25rem 0.3rem;
     padding: 0.4rem $gutter;
-    align-content: space-between;
     position: relative;
-    // background: $lowlight;
-    // border-radius: 0.3rem;
     &__name {
-      line-height: 2rem;
+      line-height: 1.2rem;
     }
     &__image {
       overflow: hidden;
@@ -206,16 +207,11 @@ font-family: 'Lato', sans-serif;
       p{
       text-align: center;
       vertical-align: middle;
-      // background: lighten($peach, 12%);
-      // width: auto;
-      // padding: 25%;
-      // margin: 25% auto;
-      // border-radius: 50%;
     }
-    }
+  }
     &__button{
-      margin: 1rem auto;
-      padding: 0.2rem 0;
+      margin: 0.2rem auto 0.8rem auto;
+      padding: 0.3rem 0;
       width: 100%;
       background: $accent;
       color: #fff;
