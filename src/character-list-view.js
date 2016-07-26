@@ -23,7 +23,6 @@ export default class CharacterListView {
         characterPicChild.classList.add('right-container__element__image__img');
 
 
-
         characterName.innerText = character.name;
         characterPicChild.src = (`${character.thumbnail.path}.${character.thumbnail.extension}`);
 
@@ -33,6 +32,5 @@ export default class CharacterListView {
         characterElement.appendChild(characterName);
       }
     );
-
   }
 }

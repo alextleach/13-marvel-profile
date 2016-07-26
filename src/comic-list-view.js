@@ -7,6 +7,8 @@ export default class ComicListView {
 
   render(){
     const comicParent = document.querySelector('.right-container__container-comics');
+    const modalTitle = document.querySelector('.modal__title');
+    const modalText = document.querySelector('.modal__text');
 
     this.comic.results.forEach(
       (comic) => {
@@ -34,6 +36,9 @@ export default class ComicListView {
         comicNumber.innerText = (`# ${comic.issueNumber}`);
         comicPicChild.src = (`${comic.thumbnail.path}.${comic.thumbnail.extension}`);
         comicReadMore.innerText = 'Read More';
+
+        modalTitle.innerText = comic.title;
+        modalText.innerText = comic.description;
 
         comicElement.appendChild(comicPicParent);
         comicPicParent.appendChild(comicPicChild);
