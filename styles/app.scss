@@ -1,8 +1,4 @@
-// @import 'yoga';
-// @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
 
 @import 'box-sizing';
 
@@ -15,6 +11,7 @@ $purple: #f0f0f0;
 $green: #202020;
 $border: #fff;
 $peach: #ffb49d;
+$active: #c80000;
 $gutter: 0.5rem;
 
 body {
@@ -133,11 +130,8 @@ font-family: 'Lato', sans-serif;
 
 .right-container {
   width: 70%;
-  // margin: 0 $gutter;
   padding: 1.5rem;
-  // background: $bluegray;
-  // border-radius: 0.3rem;
-  // border: 0.05rem solid $border;
+
 
 
   h2{
@@ -150,7 +144,6 @@ font-family: 'Lato', sans-serif;
     border-radius: 0.4rem;
   }
   &__new-element {
-    // width: calc(100% - 1rem);
     width: 100%;
 
   }
@@ -213,16 +206,28 @@ font-family: 'Lato', sans-serif;
       margin: 0.2rem auto 0.8rem auto;
       padding: 0.3rem 0;
       width: 100%;
+      text-transform: uppercase;
+      outline: none;
       background: $accent;
       color: #fff;
       border: 0.1rem solid darken($accent, 4%);
       border-radius: 0.3rem;
+      cursor: pointer;
+      transition: background 150ms ease-in, border 300ms linear;
+
+      &:hover {
+        background: $active;
+        background-image: radial-gradient(darken($active, 3%), rgba(#fff,0) );
+        border: 0.1rem solid lighten($active, 3%);
+        transition: background 150ms ease-in, border 300ms linear;
+      }
     }
   }
 }
 
 .modal {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   background: linear-gradient(to bottom, rgba(#1b1b1b,.75) 0%, rgba(#1b1b1b,.9) 100%) ;
   width: 100%;
   height: 100%;
@@ -231,6 +236,7 @@ font-family: 'Lato', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
+  transition: visibility 300ms ease-in, opacity 0.2s ease-in, background 0.9s ease-in;
 
   &__container {
     background: #fff;
@@ -241,19 +247,40 @@ font-family: 'Lato', sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 0.4rem;
+    box-shadow: 0.1rem 0.5rem 0.8rem rgba(#161616,.59);
   }
 
   &__active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 300ms ease-in, opacity 0.2s ease-in, background 0.9s ease-in;
   }
 
   &__closebutton {
+    border: none;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bolder;
+    outline: none;
+    color: #393939;
+    background: #fff;
+    border-radius: 0.7rem;
+    padding: 0.25rem 0.4rem;
     position: absolute;
-    right: -2rem;
+    right: -1.8rem;
     top: 0;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(#161616,.59);
+      &:hover {
+        color: #c90707;
+        background: $grayest;
+        transition: color 200ms linear, background 200ms linear;
+      }
   }
   &__title{
     padding: 0.02rem $gutter;
+    color: #202020;
+    letter-spacing: 0.08rem;
+    text-shadow: 0.05rem 0.05rem 0.05rem rgba(#7e9193,.63);
     border-bottom: 0.15rem solid $purple;
     background: linear-gradient(to left, rgba(255,255,255,1) 0%,$purple 100%);
     border-radius: 0.4rem;
