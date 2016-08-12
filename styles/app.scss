@@ -222,6 +222,7 @@ font-family: 'Lato', sans-serif;
 }
 
 .modal {
+  display: none;
   background: linear-gradient(to bottom, rgba(#1b1b1b,.75) 0%, rgba(#1b1b1b,.9) 100%) ;
   width: 100%;
   height: 100%;
@@ -241,6 +242,11 @@ font-family: 'Lato', sans-serif;
     transform: translate(-50%, -50%);
     border-radius: 0.4rem;
   }
+
+  &__active {
+    display: block;
+  }
+
   &__closebutton {
     position: absolute;
     right: -2rem;
